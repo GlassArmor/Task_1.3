@@ -1,5 +1,36 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('fonts/TTLakes/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes/TTLakes-Regular.woff') format('woff'),
+        url('fonts/TTLakes/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes/TTLakes-Medium.eot');
+    src: local('TT Lakes Medium'), local('TTLakes-Medium'),
+        url('fonts/TTLakes/TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes/TTLakes-Medium.woff') format('woff'),
+        url('fonts/TTLakes/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+        url('fonts/TTLakes/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes/TTLakes-Bold.woff') format('woff'),
+        url('fonts/TTLakes/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
-@import "fonts/TTLakes/fontstyle.css";
+
+
 
 * {
   box-sizing: border-box;
@@ -54,13 +85,8 @@ body, main {
 .menu__item:hover {
   cursor: pointer;
 }
-.menu__item:focus, .menu__item:active {
-  outline: none;
-  border: 2px solid #B8FFEC;
-  border-radius: 50%;
-}
 
-.menu__label {
+.menu__text {
   display: none;
 }
 .menu__item--burger {
@@ -110,11 +136,18 @@ body {
   border-radius: 4px;
 }
 .title__text {
+  font-weight: 700;
   font-size: 28px;
   line-height: 40px;
+  color: #1B1C21;
 }
 /* NAVIGATION */
+
 .navigation {
+  display: flex;
+}
+.navigation_list {
+  list-style: none;
   display: flex;
   width: 100%;
   overflow: auto;
@@ -126,11 +159,7 @@ body {
   display: block;
   padding: 8px 16px;
   color: #7E7E82;
-}
-.navigation__link:focus {
-  outline: none;
-  border: 2px solid #B8FFEC;
-  border-radius: 6px;
+  border: 2px solid transparent;
 }
 .navigation__link--active {
   background-color: #FFFFFF;
@@ -140,9 +169,10 @@ body {
 /* CONTENT */
 .content {
   padding: 16px;
-  padding-top: 24px;
+  padding-top: 0;
 }
 .content__text {
+  padding-top: 20px;
   font-size: 14px;
   line-height: 18px;
   color: #1B1C21;
@@ -156,12 +186,10 @@ body {
   padding:  0 24px;
   font-size: 16px;
   line-height: 24px;
+  font-family: "TT Lakes", sans-serif;
+  font-weight: 500;
+  color: #1B1C21;
   margin-top: 16px;
-}
-.content__more:active, .content__more:focus {
-  outline: none;
-  border: 2px solid #B8FFEC;
-  border-radius: 6px;
 }
 
 .article-wrapper__photo {
@@ -215,7 +243,7 @@ body {
   height: 32px;
   background-color: #EAEAEA;
   position: absolute;
-  top: 4px;
+  top: 6px;
   right: -20px;
 }
 /* CONTENT */
@@ -228,7 +256,7 @@ body {
 .content__text--hidden {
   display: block;
 }
-.content__text--hidden--string {
+.content__string--hidden {
   display: none;
 }
 .article-wrapper__photo {
@@ -240,6 +268,11 @@ body {
 }
 /* WIDTH 1120PX */
 @media (min-width: 1120px) {
+.page-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 /* HEADER */
 .page-header {
   background: none;
@@ -253,29 +286,28 @@ body {
   display: none;
 }
 .menu__right {
-  margin-top: 42px;
-  margin-right: 42px;
+  margin-top: 34px;
+  margin-right: 18px;
 }
-.menu__label {
+.menu__text {
   margin-left: 42px;
   display: block;
   vertical-align: middle;
   font-size: 16px;
   line-height: 24px;
+  font-family: "TT Lakes", sans-serif;
+  font-weight: 500;
   color: #1B1C21;
-}
-.menu__label:hover {
-  cursor: pointer;
 }
 
 
 /* NAVIGATION */
-.navigation {
+.navigation_list {
   flex-wrap: wrap;
 }
 /* CONTENT */
 main {
-  margin-top: -46px;
+  margin-top: -64px;
 }
 .title {
   width: 30%;
@@ -286,10 +318,11 @@ main {
   line-height: 20px;
   color: #1B1C21;
 }
-.content__text--hidden--string {
+.content__string--hidden {
   display: inline;
 }
 .article-wrapper__photo {
+  margin-top: 0;
   width: 532px;
   height: 307px;
   background: url('img/photo.jpg') no-repeat;
