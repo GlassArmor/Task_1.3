@@ -256,7 +256,7 @@ body {
 .content__text--hidden {
   display: block;
 }
-.content__string--hidden {
+.content__string {
   display: none;
 }
 .article-wrapper__photo {
@@ -282,6 +282,16 @@ body {
 .menu__left {
   display: none;
 }
+.menu__item {
+  width: auto;
+}
+.menu__item--repair {
+  background-position: right;
+}
+.menu__item--checkstatus {
+  background-position: right;
+}
+
 .menu__item--hidden {
   display: none;
 }
@@ -290,7 +300,8 @@ body {
   margin-right: 18px;
 }
 .menu__text {
-  margin-left: 42px;
+  margin-left: 24px;
+  padding-right: 50px;
   display: block;
   vertical-align: middle;
   font-size: 16px;
@@ -318,7 +329,7 @@ main {
   line-height: 20px;
   color: #1B1C21;
 }
-.content__string--hidden {
+.content__string {
   display: inline;
 }
 .article-wrapper__photo {
