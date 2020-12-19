@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Repair</title>
+  <link rel="stylesheet" href="contents/repair-style.css">
+  <!-- SLIDER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+</head>
+<body>
+  <section class="brands">
+    <header class="brands__header">
+      <h2 class="brands__title">Ремонт техники различных брендов</h2>
+    </header>
+
+    <div class="swiper-container">
+
+      <div class="brands__list swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="brands__item">
+            <div class="brands__logo brands__logo--lenovo"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item">
+            <div class="brands__logo brands__logo--gnusmas"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item">
+            <div class="brands__logo brands__logo--apple"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item">
+            <div class="brands__logo brands__logo--viewSonic"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item">
+            <div class="brands__logo brands__logo--bosch"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item">
+            <div class="brands__logo brands__logo--hp"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item brands__item--visible visually-hidden">
+            <div class="brands__logo brands__logo--acer"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item brands__item--visible visually-hidden">
+            <div class="brands__logo brands__logo--cony"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item visually-hidden">
+            <div class="brands__logo brands__logo--lenovo"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item visually-hidden">
+            <div class="brands__logo brands__logo--gnusmas"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="brands__item visually-hidden">
+            <div class="brands__logo brands__logo--apple"></div>
+            <a class="brands__button" href=""></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <button type="button" class="brands__showmore">Показать все</button>
+
+    </div>
+
+
+
+  </section>
+
+  <script src="contents/jabjab/repairscript.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    let swiperContainer = document.querySelector('.swiper-container');
+    let swiperWrapper = document.querySelector('.swiper-wrapper');
+    let swiperItem = document.querySelectorAll('.swiper-slide');
+    if ( window.innerWidth < 768 ) {
+        let checker = 1;
+        var swiper = new Swiper('.swiper-container', {
+          pagination: {
+            el: '.swiper-pagination',
+          },
+          slidesPerView: 1,
+          centeredSlides: true,
+          width: 256
+        });
+      } else {
+        swiperContainer.classList.remove('swiper-container');
+        swiperWrapper.classList.remove('swiper-wrapper');
+        for (let i = 0; i < swiperItem.length; i++) {
+          swiperItem[i].classList.remove('swiper-slide');
+        }
+      }
+
+  </script>
+
+</body>
+</html>

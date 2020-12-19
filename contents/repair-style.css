@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+        url('fonts/TTLakes/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/TTLakes/TTLakes-Regular.woff') format('woff'),
+        url('fonts/TTLakes/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'TT Lakes', sans-serif;
+}
+.brands {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+}
+.brands__header {
+  height: 56px;
+  background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+  padding: 16px 16px 0 16px;
+}
+.brands__title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #7E7E82;
+}
+.brands__list {
+  padding: 24px 32px;
+  display: block;
+}
+.brands__item {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
+  height: 72px;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  background-color: #fff;
+  margin: 8px;
+}
+.brands__logo {
+  width: 150px;
+  height: 72px;
+}
+
+.brands__logo--lenovo {
+  background: url('img/lenovo.svg') no-repeat 16px 50%;
+}
+.brands__logo--gnusmas {
+  background: url('img/gnusmas.svg') no-repeat 16px 50%;
+}
+.brands__logo--apple {
+  background: url('img/apple.svg') no-repeat 16px 50%;
+}
+.brands__logo--viewSonic {
+  background: url('img/view_sonic.svg') no-repeat 16px 50%;
+}
+.brands__logo--bosch {
+  background: url('img/bosch.svg') no-repeat 16px 50%;
+}
+.brands__logo--hp {
+  background: url('img/hp.svg') no-repeat 16px 50%;
+}
+.brands__logo--acer {
+  background: url('img/acer.svg') no-repeat 16px 50%;
+}
+.brands__logo--cony {
+  background: url('img/cony.svg') no-repeat 16px 50%;
+}
+
+
+
+.brands__button {
+  display:block;
+  text-decoration: none;
+  width: 42px;
+  height: 42px;
+  margin: 16px;
+  background: url('img/go.svg') no-repeat;
+}
+
+/* BUTTON SHOW */
+
+.brands__showmore {
+  display: none;
+  padding-left: 32px;
+  background: transparent url('img/expand.svg') no-repeat 4px 50%;
+  border: none;
+  margin-left: 24px;
+}
+
+.brands__showmore--reversed {
+  background: transparent url('img/reversed.svg') no-repeat 4px 50%;
+}
+
+/* RESIZE */
+
+@media (min-width: 768px) {
+  .brands {
+    padding-bottom: 34px;
+  }
+  .brands__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 12px;
+    width: 768px;
+    margin: 0 auto;
+  }
+  .brands__item {
+    width: 224px;
+    margin: 8px 12px;
+  }
+  .brands__showmore {
+    display: block;
+  }
+  .visually-hidden {
+  	position: absolute;
+  	width: 1px;
+  	height: 1px;
+  	margin: -1px;
+  	border: 0;
+  	padding: 0;
+  	clip: rect (0 0 0 0);
+  	overflow: hidden;
+  }
+}
+
+@media (min-width: 1120px) {
+  .brands__list {
+    width: 1120px;
+  }
+  .brands__item {
+    width: 240px;
+    margin: 8px 16px;
+  }
+  .brands__item--visible {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: #fff;
+    margin: 8px 16px;
+  }
+}
