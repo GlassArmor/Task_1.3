@@ -15,11 +15,15 @@
   box-sizing: border-box;
   font-family: 'TT Lakes', sans-serif;
 }
+body {
+  overflow:hidden;
+}
 .brands {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
   background-color: #f8f8f8;
+  overflow: hidden;
 }
 .brands__header {
   height: 56px;
