@@ -7,9 +7,7 @@
   <title>Repair</title>
   <link rel="stylesheet" href="contents/repair-style.css">
   <!-- SLIDER -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+  <link rel="stylesheet" href="contents/swiper/swiper-bundle.css">
 
 </head>
 <body>
@@ -18,88 +16,88 @@
       <h2 class="brands__title">Ремонт техники различных брендов</h2>
     </header>
 
-    <div class="swiper-container">
+    <div class="to_be_swiper">
 
-      <div class="brands__list swiper-wrapper">
+      <ul class="brands__list">
 
-        <div class="swiper-slide">
+        <li class="brands__wrapper">
           <div class="brands__item">
-            <div class="brands__logo brands__logo--lenovo"></div>
+            <img class="brands__logo" src="contents/img/lenovo.svg" alt="Lenovo"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
+        <li class="brands__wrapper">
           <div class="brands__item">
-            <div class="brands__logo brands__logo--gnusmas"></div>
+            <img class="brands__logo" src="contents/img/gnusmas.svg" alt="Samsung"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
+        <li class="brands__wrapper">
           <div class="brands__item">
-            <div class="brands__logo brands__logo--apple"></div>
+            <img class="brands__logo" src="contents/img/apple.svg" alt="Apple"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
+        <li class="brands__wrapper">
           <div class="brands__item">
-            <div class="brands__logo brands__logo--viewSonic"></div>
+            <img class="brands__logo" src="contents/img/view_sonic.svg" alt="View Sonic"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
+        <li class="brands__wrapper">
           <div class="brands__item">
-            <div class="brands__logo brands__logo--bosch"></div>
+            <img class="brands__logo" src="contents/img/bosch.svg" alt="Bocsh"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
+        <li class="brands__wrapper">
           <div class="brands__item">
-            <div class="brands__logo brands__logo--hp"></div>
+            <img class="brands__logo" src="contents/img/hp.svg" alt="Hewlett-Packard"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
-          <div class="brands__item brands__item--visible visually-hidden">
-            <div class="brands__logo brands__logo--acer"></div>
+        <li class="brands__wrapper">
+          <div class="brands__item">
+            <img class="brands__logo" src="contents/img/acer.svg" alt="Acer"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
-          <div class="brands__item brands__item--visible visually-hidden">
-            <div class="brands__logo brands__logo--cony"></div>
+        <li class="brands__wrapper">
+          <div class="brands__item">
+            <img class="brands__logo" src="contents/img/cony.svg" alt="Sony"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
-          <div class="brands__item visually-hidden">
-            <div class="brands__logo brands__logo--lenovo"></div>
+        <li class="brands__wrapper">
+          <div class="brands__item">
+            <img class="brands__logo" src="contents/img/lenovo.svg" alt="Lenovo"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
-          <div class="brands__item visually-hidden">
-            <div class="brands__logo brands__logo--gnusmas"></div>
+        <li class="brands__wrapper">
+          <div class="brands__item">
+            <img class="brands__logo" src="contents/img/gnusmas.svg" alt="Samsung"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-        <div class="swiper-slide">
-          <div class="brands__item visually-hidden">
-            <div class="brands__logo brands__logo--apple"></div>
+        <li class="brands__wrapper">
+          <div class="brands__item">
+            <img class="brands__logo" src="contents/img/apple.svg" alt="Apple"></img>
             <a class="brands__button" href=""></a>
           </div>
-        </div>
+        </li>
 
-      </div>
+      </ul>
 
       <div class="swiper-pagination"></div>
 
@@ -111,32 +109,8 @@
 
   </section>
 
+  <script src="contents/swiper/swiper-bundle.min.js"></script>
   <script src="contents/jabjab/repairscript.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-    let swiperContainer = document.querySelector('.swiper-container');
-    let swiperWrapper = document.querySelector('.swiper-wrapper');
-    let swiperItem = document.querySelectorAll('.swiper-slide');
-    if ( window.innerWidth < 768 ) {
-        let checker = 1;
-        var swiper = new Swiper('.swiper-container', {
-          pagination: {
-            el: '.swiper-pagination',
-          },
-          slidesPerView: 1,
-          centeredSlides: true,
-          width: 256
-        });
-      } else {
-        swiperContainer.classList.remove('swiper-container');
-        swiperWrapper.classList.remove('swiper-wrapper');
-        for (let i = 0; i < swiperItem.length; i++) {
-          swiperItem[i].classList.remove('swiper-slide');
-        }
-      }
-
-  </script>
 
 </body>
 </html>
