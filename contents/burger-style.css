@@ -58,6 +58,7 @@
 .burger-header {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 57px;
 }
 .burger-header__box {
   display: flex;
@@ -67,7 +68,6 @@
 .logo {
   width: 100px;
   height: 55px;
-  background: url("img/Group.svg") no-repeat 50% 50%;
 }
 
 /* BUTTONS */
@@ -76,11 +76,26 @@
   width: 42px;
   height: 42px;
   border: none;
+  transition: all 0.5s;
+  border: 2px solid transparent;
+  border-radius: 50%;
 }
+
+.button:hover {
+  border-color: #41F6D7;
+  transform: scale(1.2);
+}
+
+.button:focus {
+  border-color: #41F6D7;
+  transform: scale(1.2);
+  outline: none;
+}
+
+
 .button--close {
   background: url("img/close.svg") no-repeat 50% 50%;
   margin-top: 6px;
-  margin-bottom: 57px;
 }
 .button--search {
   background: url("img/search.svg") no-repeat 50% 50%;
@@ -140,13 +155,14 @@
 /* FOOTER */
 .buttons-container {
   display: flex;
-  width: 168px;
-  justify-content: space-between;
+  gap: 16px;
   padding: 16px 0;
 }
 .text {
+  display: block;
   font-size: 16px;
   line-height: 24px;
+  text-decoration: none;
 }
 .text--bold {
   font-size: 24px;
@@ -162,7 +178,13 @@
   background-color: #fff;
   text-transform: uppercase;
   margin-right: 7px;
+  transition: all 0.5s;
 }
 .lang-select__item--selected {
   color: #7E7E82;
+}
+.lang-select__item:hover, .lang-select__item:focus {
+  color: #7E7E82;
+  outline: none;
+  transform: scale(1.1);
 }
