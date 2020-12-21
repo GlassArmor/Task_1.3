@@ -55,33 +55,6 @@
   margin-left: 16px;
 }
 
-.brands__logo--lenovo {
-  background: url('img/lenovo.svg') no-repeat 16px 50%;
-}
-.brands__logo--gnusmas {
-  background: url('img/gnusmas.svg') no-repeat 16px 50%;
-}
-.brands__logo--apple {
-  background: url('img/apple.svg') no-repeat 16px 50%;
-}
-.brands__logo--viewSonic {
-  background: url('img/view_sonic.svg') no-repeat 16px 50%;
-}
-.brands__logo--bosch {
-  background: url('img/bosch.svg') no-repeat 16px 50%;
-}
-.brands__logo--hp {
-  background: url('img/hp.svg') no-repeat 16px 50%;
-}
-.brands__logo--acer {
-  background: url('img/acer.svg') no-repeat 16px 50%;
-}
-.brands__logo--cony {
-  background: url('img/cony.svg') no-repeat 16px 50%;
-}
-
-
-
 .brands__button {
   display:block;
   text-decoration: none;
