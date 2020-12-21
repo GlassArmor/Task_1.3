@@ -58,7 +58,6 @@ function checkSwiper() {
       }
       pagination.style.display = "none";
       swiperContainer.classList.remove('swiper-container');
-    //  swiperContainer.classList.remove('swiper-container-initialized', 'swiper-container-horizontal', 'swiper-container-android');
       swiperWrapper.classList.remove('swiper-wrapper');
       for (let i = 0; i < swiperItem.length; i++) {
         swiperItem[i].classList.remove('swiper-slide');
