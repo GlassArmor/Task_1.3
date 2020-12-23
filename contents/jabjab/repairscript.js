@@ -28,7 +28,7 @@ window.addEventListener('resize', function(){
 });
 
 function checkSwiper() {
-  if ( window.innerWidth < 768 ) {
+  if ( window.innerWidth < 768 && checker === 0) {
 
     swiperContainer.classList.add('swiper-container');
     swiperWrapper.classList.add('swiper-wrapper');
@@ -45,23 +45,25 @@ function checkSwiper() {
         loop: true,
         loopedSlides: 11,
         centeredSlides: true,
-        width: 256
+        width: 256,
+        height: 88
       });
       checker = 1;
     } else {
 
-      if (checker === 1) {
+      if (window.innerWidth >= 768 && checker === 1) {
         swiper.destroy();
         checker = 0;
         showButton.textContent = 'Показать все';
         showButton.classList.remove('brands__showmore--reversed');
         status = 0;
-      }
-      pagination.style.display = "none";
-      swiperContainer.classList.remove('swiper-container');
-      swiperWrapper.classList.remove('swiper-wrapper');
-      for (let i = 0; i < swiperItem.length; i++) {
-        swiperItem[i].classList.remove('swiper-slide');
+
+        pagination.style.display = "none";
+        swiperContainer.classList.remove('swiper-container');
+        swiperWrapper.classList.remove('swiper-wrapper');
+        for (let i = 0; i < swiperItem.length; i++) {
+          swiperItem[i].classList.remove('swiper-slide');
+        }
       }
     }
 }
