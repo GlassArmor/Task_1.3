@@ -36,13 +36,14 @@ function checkSwiper() {
     for (let i = 0; i < swiperItem.length; i++) {
       swiperItem[i].classList.add('swiper-slide');
     }
+
       swiper = new Swiper('.swiper-container', {
         pagination: {
           el: '.swiper-pagination',
           clickable: true
         },
         loop: true,
-        slidesPerView: 1,
+        loopedSlides: 11,
         centeredSlides: true,
         width: 256
       });
